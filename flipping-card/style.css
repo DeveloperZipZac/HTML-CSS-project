@@ -21,6 +21,8 @@ section {
     align-items: center;
 
     position: relative;
+
+    perspective: 1000px;
 }
 
 section::before {
@@ -50,6 +52,13 @@ section::after {
     height: 225px;
     position: relative;
     z-index: 100;
+
+    transition: 0.6s;
+    transform-style: preserve-3d;
+}
+
+.container:hover {
+    transform: rotateY(180deg);
 }
 
 .container .card {
@@ -62,6 +71,9 @@ section::after {
     border: 1px solid rgba(255, 255, 255, 0.1);
 
     padding: 25px;
+
+    position: absolute;
+    backface-visibility: hidden;
 }
 
 header {
@@ -125,11 +137,13 @@ h5 {
 
 .card.back-face {
     border: none;
+    color: #f4f4f4;
+
+    transform: rotateY(180deg);
 }
 
 .card.back-face h6 {
     font-size: 8px;
-    color: #f4f4f4;
 }
 
 .card.back-face .magnetic-strip {
@@ -163,6 +177,7 @@ h5 {
 
 .card.back-face i {
     font-size: 12px;
+    color: #000;
     background-color: #d9d4d4;
     border-radius: 5px;
 
@@ -170,5 +185,10 @@ h5 {
     padding: 5px;
 
     z-index: -1;
+}
+
+.card.back-face h5{
+    font-size: 9px;
+    margin-top: 15px;
 }
 
