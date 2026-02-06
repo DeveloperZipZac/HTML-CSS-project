@@ -1,0 +1,85 @@
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-box {
+    width: 100%;
+    height: 100vh;
+    background: url('./img/computer_desk.jpg') right no-repeat;
+    background-size: cover;
+}
+
+.main-box .side-bar-menu {
+    width: 250px;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(3px);
+    position: relative;
+}
+
+.side-bar-menu .logo {
+    width: 100%;
+    height: 60px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-sizing: 1px solid rgba(255, 255, 255, 0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.side-bar-menu .logo a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: #6adda2;
+}
+
+.side-bar-menu ul {
+    margin-top: 5px;
+}
+
+ul li {
+    list-style-type: none;
+    padding: 20px;
+    transition: all 0.2s linear;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #6adda2;
+}
+
+li a i {
+    margin-right: 5px;
+}
+
+ul li:hover {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+.side-bar-menu .social-media {
+    position: absolute;
+    left: 50%;
+    bottom: 28px;
+    transform: translateX(-55%);
+}
+
+.social-media i {
+    color: #6adda2;
+    font-size: 20px;
+    margin-left: 3px;
+    opacity: 0.6;
+    transition: all 0.2s linear;
+}
+
+.social-media i:hover {
+    opacity: 1;
+}
